@@ -144,6 +144,8 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  " For php file ,load phpcomplete
+  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -169,3 +171,10 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 set guifont=Monospace\ 12
 set guifontwide=Monospace\ 12
 
+" emmet
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css EmmetInstall
+
+" closeTag
+let g:closetag_html_style=1 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
